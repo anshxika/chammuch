@@ -252,3 +252,118 @@ body {
   }
 }
 
+/*sign up page*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Silkescreen&screen&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #501f1f;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top left, rgb(201, 91, 225), rgb(197, 149, 219));
+    padding: 120px;
+}
+
+.left {
+    flex: 1;
+    background: linear-gradient(to bottom right, #ca8bec,#d1a9e8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
+    width: 50%;
+    height: 90%;
+}
+
+.image {
+    width: 60%;
+    height: 170%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.right {
+    flex: 1;
+    max-width: 400px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    width: 100%;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #201212;
+}
+
+.input-field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.input-field input[type="submit"]{
+    background-color: #df5fed;
+    border: none;
+    color: rgb(22, 14, 14);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-field input[type="submit"]:hover{
+    background-color: #d812f7;
+}
+
+.signup-footer{
+    text-align: centre;
+    margin-top: 20px;
+}
+
+.signup-footer p{
+    color: #433737;
+    font-size: 0.9rem;
+}
+
+.signup-footer p a {
+    color: #201212;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-footer p a:hover {
+    text-decoration: underline;
+}
