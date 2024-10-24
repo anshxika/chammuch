@@ -1,48 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./css files/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+    <script defer src="./js files/login.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 <body>
-  <div class="container">
-    <input type="checkbox" id="flip">
-    <div class="cover">
-      <div class="front">
-        <img src="./images/login.png" alt="">
-        <div class="text">
-          <span class="text-1">Khaana hai toh khaana hai,<br> mood set hai! </span>
-        </div>
-      </div>
-    </div>
-    <div class="forms">
-        <div class="form-content">
-          <div class="login-form">
-            <div class="title">Login</div>
-          <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
-              </div>
-              <div class="text"><a href="#">Forgot password?</a></div>
-              <div class="button input-box">
-                <input type="submit" value="Sumbit">
-        </form>
-      </div>
-        
+
+<div class="login-container">
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username" required>
             </div>
-      </form>
+            <div class="input-box password-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" required>
+                <span class="eye-icon">
+                    <i class="fas fa-eye" id="togglePassword"></i>
+                </span>
+            </div>                     
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
     </div>
+    <div class="login-img">
+        <img src="./images/login.png" alt="Catchy Line">
+        <div class="img-text">
+            <p>Khaana hai toh khaana hai,<br> mood set hai!</p>
+        </div>
     </div>
-    </div>
-  </div>
 </body>
 </html>
+

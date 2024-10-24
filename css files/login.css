@@ -1,253 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #7d2ae8;
-  padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    background: #f3f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.container {
-  position: relative;
-  max-width: 1000px; /* Increased width */
-  width: 100%;
-  background: #fff;
-  padding: 40px 30px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  perspective: 2700px;
-  border-radius: 20px; /* Rounded corners for the card */
-  overflow: hidden; /* Prevents overflow from rounded corners */
+.login-container {
+    display: flex;
+    background-color: #fff;
+    max-width: 900px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
-.container .cover {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  width: 50%;
-  z-index: 98;
-  transition: all 1s ease;
-  transform-origin: left;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
+.login-form {
+    padding: 50px;
+    flex: 1;
 }
 
-.container #flip:checked ~ .cover {
-  transform: rotateY(-180deg);
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'DynaPuff';
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #024caa;
 }
 
-.container #flip:checked ~ .forms .login-form {
-  pointer-events: none;
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
 }
 
-.container .cover .front{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 0 0 20px 0; /* Rounded corners for the cover */
-  overflow: hidden; /* Ensures image respects rounded corners */
+.input-box i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
 }
-.container .cover .back {
+
+.input-box input {
+    width: 100%;
+    padding: 10px 40px;
+    font-size: 1rem;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #024caa;
+}
+
+.input-box.password-box {
+    position: relative;
+}
+
+.password-box input {
+    width: 100%;
+    padding-right: 40px; /* Space for the eye icon */
+    padding-left: 40px; /* Space for the lock icon */
+    box-sizing: border-box;
+}
+
+.eye-icon {
+    position: absolute;
+    left: 88%; /* Positions the eye icon at the far right */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2; /* Ensures the eye icon stays clickable and above other elements */
+}
+
+#togglePassword {
+    color: #999;
+}
+
+
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #024caa;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: black;
+}
+
+.btn {
+    width: 100%;
+    background-color: #024caa;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: black;
+}
+
+.login-img {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #091057;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.login-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px);
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 0 0 0 0; /* Rounded corners for the cover */
-    overflow: hidden; /* Ensures image respects rounded corners */
-  }
-
-.cover .back {
-  transform: rotateY(180deg);
 }
 
-.container .cover img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 10;
+.img-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    font-family: 'DynaPuff';
+    font-weight: 400;
 }
 
-.container .cover .text {
-  position: absolute;
-  z-index: 10;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-img {
+        display: none;
+    }
 }
 
-.container .cover .text::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  opacity: 0.5;
-  background: #7d2ae8;
-}
-
-.cover .text .text-1,
-.cover .text .text-2 {
-  z-index: 20;
-  font-size: 26px;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-}
-
-.cover .text .text-2 {
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.container .forms {
-  height: 100%;
-  width: 100%;
-  background: #fff;
-  border-radius: 20px; /* Rounded corners for the form */
-  padding: 20px; /* Padding to ensure inputs are spaced */
-}
-
-.container .form-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.form-content .login-form {
-  width: calc(100% / 2 - 25px);
-}
-
-.forms .form-content .title {
-  position: relative;
-  font-size: 24px;
-  font-weight: 500;
-  color: #333;
-}
-
-.forms .form-content .title:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 25px;
-  background: #7d2ae8;
-}
-
-.forms .form-content .input-boxes {
-  margin-top: 30px;
-}
-
-.forms .form-content .input-box {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  width: 400px;
-  margin: 10px 0;
-  position: relative;
-  border-radius: 10px; /* Rounded corners for input box */
-  overflow: hidden; /* Ensure no overflow */
-  background-color: rgba(240, 240, 240, 0.5); /* Light background for input box */
-}
-
-.form-content .input-box input {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  padding: 0 40px 0 50px;
-  font-size: 16px;
-  font-weight: 500;
-  background: transparent; /* Make input background transparent */
-}
-
-.form-content .input-box input:focus,
-.form-content .input-box input:valid {
-  border-color: #7d2ae8;
-}
-
-.form-content .input-box i {
-  position: absolute;
-  left: 20px;
-  color: #7d2ae8;
-  font-size: 17px;
-}
-
-.forms .form-content .text {
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
-}
-
-.forms .form-content .text a {
-  text-decoration: none;
-}
-
-.forms .form-content .text a:hover {
-  text-decoration: underline;
-}
-
-.forms .form-content .button {
-  color: #fff;
-  margin-top: 40px;
-}
-
-.forms .form-content .button input {
-  color: #fff;
-  background: #7d2ae8;
-  border-radius: 50px; /* Making the button round */
-  padding: 15px; /* Added padding for better appearance */
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-.forms .form-content .button input:hover {
-  background: #5b13b9;
-}
-
-.forms .form-content label {
-  color: #5b13b9;
-  cursor: pointer;
-}
-
-.forms .form-content label:hover {
-  text-decoration: underline;
-}
-
-.forms .form-content .login-text {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.container #flip {
-  display: none;
-}
-
-@media (max-width: 730px) {
-  .container .cover {
-    display: none;
-  }
-
-  .form-content .login-form {
-    width: 100%;
-  }
-
-  .container #flip:checked ~ .forms .login-form {
-    display: none;
-  }
-}
