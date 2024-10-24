@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css files/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-img">
+            <img src="./images/signup.jpg" alt="Catchy Line">
+        </div>
+        
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signupForm" action="#">
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-box password-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span class="eye-icon">
+                        <i class="fas fa-eye" id="togglePassword"></i>
+                    </span>
+                </div>
+                <div class="input-box password-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <span class="eye-icon">
+                        <i class="fas fa-eye" id="toggleConfirmPassword"></i>
+                    </span>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                
+                <!-- Redirection to login page -->
+                <div class="login-redirect">
+                    <p>Already have an account? <a href="login.html">Log in here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script defer src="./js files/signup.js"></script>
+</body>
+</html>
+

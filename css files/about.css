@@ -17,8 +17,8 @@ body {
     font-weight: 600;
 }
 #about p{
-    font-size: 1.2rem;
-    font-family: '';
+    font-size: 1rem;
+    font-family: 'Afacad Flux';
 }
 /* #about h2 {
     background: linear-gradient(45deg, #ff0066, #ffcc00, #00ff99, #0099ff);
