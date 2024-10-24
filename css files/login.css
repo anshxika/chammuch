@@ -157,6 +157,26 @@ body {
     font-family: 'DynaPuff';
     font-weight: 400;
 }
+.signup-redirect {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.signup-redirect p {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.signup-redirect a {
+    color: #024caa;  /* A subtle color for the signup link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-redirect a:hover {
+    color: black;  /* Hover effect to make the link stand out */
+}
+
 
 @media (max-width: 768px) {
     .login-container {
