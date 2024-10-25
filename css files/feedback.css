@@ -1,0 +1,144 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f3f4f6;
+}
+
+/* Feedback Container */
+.feedback-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.feedback-container h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+/* Form Fields */
+form input, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: none; /* Prevents user resizing */
+}
+
+/* Keep input fields fixed height */
+form input {
+  height: 40px;
+}
+
+/* Textarea with fixed height and scroll */
+textarea {
+  height: 80px;  /* Set fixed height */
+  overflow: auto; /* Adds scroll if content overflows */
+  resize: none;   /* Prevents user resizing */
+}
+
+/* Star Rating */
+.star-rating {
+  margin-bottom: 1rem;
+}
+
+.star {
+  font-size: 2rem;
+  color: #d3d3d3;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.star.hovered,
+.star.permanent {
+  color: #ffd700;
+  text-shadow: 0px 0px 10px #ffd700;
+}
+
+/* Form Fields */
+form input, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  form {
+      padding: 15px;
+  }
+  
+  form input, form textarea {
+      font-size: 0.9rem;
+  }
+  
+  .stars i {
+      font-size: 1.5rem;
+  }
+  
+  .btn {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+      padding: 10px;
+  }
+  
+  .stars i {
+      font-size: 1.3rem;
+  }
+  
+  form input {
+      height: 36px;
+  }
+  
+  textarea {
+      height: 70px;
+  }
+  
+  .btn {
+      padding: 8px;
+      font-size: 0.8rem;
+  }
+}
+
