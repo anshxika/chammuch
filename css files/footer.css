@@ -87,7 +87,7 @@ ul {
 }
 
 .footer-col h4:hover {
-    background-color: #412e1c; /* Keep this color or change it to suit your theme */
+    background-color: #412e1c;
     transition: background-color 0.3s ease;
 }
 
