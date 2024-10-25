@@ -1,6 +1,5 @@
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +20,8 @@ body {
 }
 
 .feedback-container h2 {
+  font-family: 'DynaPuff';
+  font-weight: 600;
   margin-bottom: 1rem;
   color: #333;
 }
@@ -34,6 +35,8 @@ form input, form textarea {
   font-size: 1rem;
   box-sizing: border-box;
   resize: none; /* Prevents user resizing */
+  font-family: 'Afacad Flux';
+  font-weight: 600;
 }
 
 /* Keep input fields fixed height */
