@@ -5,7 +5,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background: #f3f4f6;
+  background: #f0f0f0; /* Light background for better contrast */
 }
 
 /* Feedback Container */
@@ -23,8 +23,9 @@ body {
   font-family: 'DynaPuff';
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #333;
+  color: #333; /* Keeping header text color for contrast */
 }
+
 /* Form Fields */
 form input, form textarea {
   width: 100%;
@@ -58,31 +59,15 @@ textarea {
 
 .star {
   font-size: 2rem;
-  color: #d3d3d3;
+  color: grey; /* Changed to grey for inactive stars */
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .star.hovered,
 .star.permanent {
-  color: #ffd700;
-  text-shadow: 0px 0px 10px #ffd700;
-}
-
-/* Form Fields */
-form input, form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin: 0.5rem 0;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-textarea {
-  resize: vertical;
-  height: 80px;
+  color: #ffdc00; /* Changed to your chosen color for active stars */
+  text-shadow: 0px 0px 10px #ffdc00;
 }
 
 /* Submit Button */
@@ -91,8 +76,8 @@ textarea {
   padding: 0.7rem;
   margin-top: 1rem;
   font-size: 1rem;
-  color: #fff;
-  background-color: #4CAF50;
+  color: #000; /* Black text for contrast */
+  background-color: #ffdc00; /* Button color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -100,7 +85,7 @@ textarea {
 }
 
 .submit-btn:hover {
-  background-color: #45a049;
+  background-color: #ffd700; /* Slightly darker shade on hover */
 }
 
 @media (max-width: 768px) {

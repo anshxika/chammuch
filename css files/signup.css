@@ -35,7 +35,7 @@ body {
     font-family: 'DynaPuff';
     font-weight: 600;
     font-size: 2rem; /* Reduced font size */
-    color: #024caa;
+    color: black; /* Set header color to yellow */
 }
 
 .input-box {
@@ -64,7 +64,7 @@ body {
 }
 
 .input-box input:focus {
-    border-color: #024caa;
+    border-color: #ffcd00; /* Change focus border color to yellow */
 }
 
 .password-box {
@@ -87,40 +87,23 @@ body {
     z-index: 2;
 }
 
-#togglePassword {
-    color: #999;
-}
-
-.forgot-password {
-    text-align: right;
-    margin-bottom: 15px;
-}
-
-.forgot-password a {
-    color: #024caa;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-.forgot-password a:hover {
-    color: black;
-}
-
 .btn {
     width: 100%;
-    background-color: #024caa;
+    background-color: #000; /* Set button background to black */
     border: none;
     padding: 10px;
     color: white;
     font-size: 1rem;
     border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, outline 0.3s ease; /* Added outline transition */
+    outline: 2px solid transparent; /* Add transparent outline */
 }
 
 .btn:hover {
-    background: black;
+    color: black;
+    font-weight: bold;
+    background: #ffcd00; /* Change button background to yellow on hover */
 }
 
 .signup-img {
@@ -129,8 +112,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #091057;
-    color: white;
     text-align: center;
     padding: 20px;
     overflow: hidden;
@@ -145,18 +126,6 @@ body {
     left: 0;
 }
 
-.img-text {
-    position: relative;
-    z-index: 1;
-    color: white;
-    font-size: 1.5rem;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    font-family: 'DynaPuff';
-    font-weight: 400;
-}
-
 .login-redirect {
     margin-top: 15px;
     text-align: center;
@@ -168,13 +137,13 @@ body {
 }
 
 .login-redirect a {
-    color: #024caa;
+    color: black; 
     text-decoration: none;
     font-weight: bold;
 }
 
 .login-redirect a:hover {
-    color: black;
+    color: #ffcd00; /* Change color on hover */
 }
 
 /* Responsive Styles for Mobile */
@@ -188,3 +157,4 @@ body {
         display: none;
     }
 }
+
