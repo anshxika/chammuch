@@ -146,6 +146,42 @@ body {
     color: #ffcd00; /* Change color on hover */
 }
 
+/* Shake animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background-color: #ffcd00;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.input-box.position-relative {
+    position: relative;
+}
+
+.tooltip.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
     .signup-container {
