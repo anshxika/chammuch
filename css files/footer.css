@@ -24,9 +24,9 @@ ul{
 }
 
 .footer{
-    background-color: rgb(18, 17, 17);
+    background-color: rgb(10, 0, 0);
     padding: 70px 0;
-    border-top: 2px solid orangered;
+    border-top: 2px solid rgb(99, 95, 93);
 }
 
 .footer-col{
@@ -41,7 +41,7 @@ ul{
     margin-bottom: 35px;
     font-weight: 500;
     position: relative;
-    background-color: rgb(40, 38, 38);
+    background-color: rgb(28, 22, 22);
     padding: 10px;
     border-radius: 5px;
 }
@@ -51,7 +51,7 @@ ul{
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: rgb(233, 83, 14);
+    background-color: rgb(121, 119, 119);
     height: 2px;
     width: 50px;
     border-radius: 2px;
@@ -75,18 +75,18 @@ ul{
 
 .footer-col ul li a:hover{
     color: white;
-    background-color: orangered;
+    background-color: rgb(48, 31, 5);
     padding-left: 12px;
     border-radius: 5px;
 }
 
 /*shadow effect*/
 .footer-col{
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0px 4px 6px rgba(8, 8, 8, 0.3);
 }
 
 .footer-col h4:hover{
-    background-color: darkgray;
+    background-color: #412e1c;
     transition: background-color 0.3s ease;
 }
 
