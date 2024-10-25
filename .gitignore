@@ -1,6 +1,9 @@
 # Node modules
 feedback-system/node_modules/
 
+#data
+feedback-system/feedbackData.json
+
 # Logs
 *.log
 

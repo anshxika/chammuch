@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const stars = document.querySelectorAll(".star");
-    const feedbackForm = document.getElementById("feedback-form");
     let selectedRating = 0;
 
     stars.forEach((star, index) => {
@@ -15,52 +14,62 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Highlight stars up to given index
+    // Highlight stars up to the given index
     function highlightStars(index) {
         stars.forEach((star, i) => {
             star.classList.toggle("hovered", i <= index);
         });
     }
 
-    // Handle form submission
-    feedbackForm.addEventListener("submit", (event) => {
-        event.preventDefault(); // Prevent default form submission
+    // Show popup notification
+    function showPopup() {
+        const popup = document.getElementById("success-popup");
+        popup.classList.add("active"); // Show the popup by adding 'active' class
 
-        // Collect feedback data
+        // Hide the popup after 3 seconds
+        setTimeout(() => {
+            popup.classList.remove("active"); // Hide popup after timeout
+        }, 3000);
+    }
+
+    // Handle form submission
+    const form = document.getElementById("feedback-form");
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
         const experience = document.getElementById("experience").value;
         const suggestions = document.getElementById("suggestions").value;
         const bugs = document.getElementById("bugs").value;
 
-        // Send feedback data to backend
+        // Prepare feedback data
+        const feedbackData = {
+            rating: selectedRating,
+            experience,
+            suggestions,
+            bugs,
+        };
+
+        // Send feedback data to the server
         fetch("http://localhost:3000/submit-feedback", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-                rating: selectedRating,
-                experience,
-                suggestions,
-                bugs,
-            }),
+            body: JSON.stringify(feedbackData),
         })
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "success") {
+                showPopup(); // Show success popup
+                // Reset form fields
+                form.reset();
+                selectedRating = 0; // Reset rating
+                highlightStars(-1); // Reset star highlighting
             }
-            return response.json();
         })
-        .then((data) => {
-            alert(data.message); // Display success message
-            feedbackForm.reset(); // Reset the form
-            selectedRating = 0; // Reset the selected rating
-            highlightStars(-1); // Reset star highlights
-        })
-        .catch((error) => {
-            console.error('There was a problem with the fetch operation:', error);
-            alert("Error submitting feedback. Please try again."); // Display error message
+        .catch(error => {
+            console.error('Error:', error);
         });
     });
 });
-
 

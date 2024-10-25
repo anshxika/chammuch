@@ -85,7 +85,36 @@ textarea {
 }
 
 .submit-btn:hover {
-  background-color: #ffd700; /* Slightly darker shade on hover */
+  color: white;
+  background-color: black; /* Slightly darker shade on hover */
+}
+
+.popup {
+  display: none; /* Hide by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Make sure it's on top */
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+}
+
+.popup.active {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Optional: For a fade-out effect */
+.popup.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 @media (max-width: 768px) {
