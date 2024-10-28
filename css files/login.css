@@ -33,7 +33,7 @@ body {
     font-family: 'DynaPuff';
     font-weight: 600;
     font-size: 2.5rem;
-    color: #024caa;
+    color: black;
 }
 
 .input-box {
@@ -46,7 +46,7 @@ body {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: #999;
+    color: grey; /* Updated to grey */
 }
 
 .input-box input {
@@ -62,7 +62,7 @@ body {
 }
 
 .input-box input:focus {
-    border-color: #024caa;
+    border-color: #ffdc00; /* Updated to yellow */
 }
 
 .input-box.password-box {
@@ -86,10 +86,8 @@ body {
 }
 
 #togglePassword {
-    color: #999;
+    color: grey; /* Updated to grey */
 }
-
-
 
 .forgot-password {
     text-align: right;
@@ -97,22 +95,22 @@ body {
 }
 
 .forgot-password a {
-    color: #024caa;
+    color: black; 
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
 .forgot-password a:hover {
-    color: black;
+    color: #ffcd00; /* Hover effect to make the link stand out */
 }
 
 .btn {
     width: 100%;
-    background-color: #024caa;
+    background-color: black; 
     border: none;
     padding: 12px;
-    color: white;
+    color: white; /* Changed text color to black for contrast */
     font-size: 1rem;
     border-radius: 25px;
     cursor: pointer;
@@ -120,7 +118,8 @@ body {
 }
 
 .btn:hover {
-    background: black;
+    background: #ffcd00; /* Keep hover color for button */
+    color: black; /* Change text color on hover for better visibility */
 }
 
 .login-img {
@@ -129,7 +128,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #091057;
+    background: #ffcd00;
     color: white;
     text-align: center;
     padding: 20px;
@@ -157,6 +156,7 @@ body {
     font-family: 'DynaPuff';
     font-weight: 400;
 }
+
 .signup-redirect {
     margin-top: 15px;
     text-align: center;
@@ -168,15 +168,14 @@ body {
 }
 
 .signup-redirect a {
-    color: #024caa;  /* A subtle color for the signup link */
+    color: black; /* Updated to yellow */
     text-decoration: none;
     font-weight: bold;
 }
 
 .signup-redirect a:hover {
-    color: black;  /* Hover effect to make the link stand out */
+    color: #ffcd00; /* Hover effect to make the link stand out */
 }
-
 
 @media (max-width: 768px) {
     .login-container {

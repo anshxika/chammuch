@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <link rel="stylesheet" href="./css files/feedback.css">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="feedback-container">
+        <h2>We Value Your Feedback</h2>
+        
+        <!-- Star Rating -->
+        <div class="star-rating">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+        </div>
+        <!-- Feedback Form -->
+        <form id="feedback-form">
+            <textarea id="experience" placeholder="Describe your experience" required></textarea>
+            <textarea id="suggestions" placeholder="Any suggestions for us?"></textarea>
+            <textarea id="bugs" placeholder="Encountered any bugs?"></textarea>
+            <button type="submit" class="submit-btn">Send Feedback</button>
+        </form>
+        <div id="success-popup" class="popup">
+            <p>Hoorah! Form submitted successfully.</p>
+        </div>
+    </div>    
+    <script src="./js files/feedback.js"></script>
+    <script src="feedback-system/feedback_server.js"></script>
+</body>
+</html>
+
