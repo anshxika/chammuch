@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f3f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cart-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    margin-top: 90px; /* Added margin to create space outside the container */
+}
+
+.cart-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.item-details img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Space between image and text */
+    object-fit: cover;
+}
+
+.item-info h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+
+/* Center align total and remove button */
+.item-total-remove {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center alignment */
+    margin-top: 10px; /* Space above */
+}
+
+.item-total {
+    color: #333;
+    font-size: 1rem;
+}
+
+.remove-btn {
+    border: none;
+    background: #ffcd00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    margin-top: 5px; /* Space between total and remove button */
+}
+
+.remove-btn:hover {
+    background: #333;
+    color: #ffcd00;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Space above quantity buttons */
+}
+
+.quantity-btn {
+    border: none;
+    background: #ddd;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #333;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.quantity-btn:hover {
+    background: #ffcd00;
+    color: #fff;
+}
+
+.quantity {
+    padding: 0 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.cart-summary {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.cart-summary p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.checkout-btn,
+.menu-btn {
+    background-color: #ffcd00;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 80%; /* Adjusted width for buttons */
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.checkout-btn:hover,
+.menu-btn:hover {
+    background-color: #333;
+    color: #ffcd00;
+}
+
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column; 
+        align-items: center; /* Center all items */
+    }
+
+    .item-details {
+        align-items: center; /* Center item details */
+    }
+
+    .item-details img {
+        width: 40px; 
+        height: 40px;
+    }
+
+    .item-total-remove {
+        margin-top: 10px; /* Space above for mobile */
+        align-items: center; /* Center alignment for total and remove button */
+    }
+
+    .item-quantity {
+        width: 100%; /* Ensures quantity buttons span full width for mobile */
+        justify-content: center; /* Centers buttons in mobile view */
+        margin-top: 5px; /* Space above quantity buttons */
+    }
+}
