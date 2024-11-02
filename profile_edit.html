@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css files/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <title>Edit Profile</title>
+</head>
+<body>
+        <header>
+            <h2>Edit Profile</h2>
+        </header>
+        <div class="edit-profile-container">
+            <form id="edit-profile-form">
+                <div class="form-group">
+                    <label for="username">Name</label>
+                    <input type="text" id="username" name="username" placeholder="enter ur username" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="enter number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-picture">Profile Picture</label>
+                    <input type="file" id="profile-picture" name="profile-picture">
+                </div>
+                <button type="submit" class="save-button">Save Changes</button>
+                <button type="button" class="cancel-button" onclick="window.location.href='profile.html'">Cancel</button>
+            </form>
+        </div>
+</body>
+</html>
