@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffcd00; /* Soft orange */
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.profile-header {
+    background-color: #FFFFFF; /* White for profile card */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.profile-picture img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.username {
+    font-size: 1.2em;
+    margin: 0;
+    color: black;
+}
+
+.user-phone {
+    color: grey;
+    margin: 5px 0;
+}
+
+.edit-button {
+    text-decoration: none;
+    color: rgb(12, 12, 11);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.profile-nav {
+    background-color: #FFFFFF; /* White for the nav background */
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-nav li {
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-nav li a {
+    display: block;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease; /* Smooth transition for hover */
+    border: 2px solid transparent; /* Default border is transparent */
+     
+    
+}
+
+.profile-nav li a:hover {
+    color: #ffcd00; /* Darker orange for hover */
+    border-color: #ffcd00;
+}
+
+/*edit profile css*/
+.edit-profile-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f5f4f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.save-button {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #333;
+}
+
+.cancel-button {
+    background-color: #888;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+    background-color: #555;
+}
+
+/*edit ended*/
+
+/*menu*/
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    margin: 10px 0;
+    transition: background-color 0.3s; /* Optional: add a background color transition */
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #333; /* Default text color */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 10px; /* Add padding for better click area */
+}
+
+.menu-icon {
+    font-size: 18px; /* Adjust icon size */
+    transition: transform 0.3s ease-in-out; /* Transition for the icon */
+}
+
+.menu-list li:hover .menu-icon {
+    transform: translateY(-5px); /* Move icon upwards on hover */
+}
+
+.menu-list li:hover a {
+    color: #ffcd00; /* Change text color on hover */
+    background-color: rgba(255, 87, 34, 0.1); /* Optional: background color on hover */
+}
+
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/*media*/
+
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .profile-header h1 {
+        font-size: 22px; /* Slightly smaller heading */
+    }
+
+    .profile-nav a {
+        font-size: 14px; /* Smaller font size for nav items */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduce body padding */
+    }
+
+    .profile-container {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .profile-header h1 {
+        font-size: 20px; /* Even smaller heading */
+    }
+
+    .profile-nav {
+        padding: 0; /* Remove padding */
+    }
+
+    .profile-nav li {
+        margin: 8px 0; /* Reduce margin between nav items */
+    }
+
+    .profile-nav a {
+        font-size: 12px; /* Even smaller font size for nav items */
+    }
+}
