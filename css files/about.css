@@ -117,7 +117,10 @@ body {
 }
 
 .team-member:hover {
-    border-image: linear-gradient(45deg, #ff0066, #ffcc00, #00ff99, #0099ff) 1; /* Multicolor gradient border on hover */
+    border-image: linear-gradient(45deg, #ff0066, #ffcc00, #00ff99, #0099ff) 1; 
+    border-width: 5px;
+    transform: scale(1.08);
+    transition: 0.2s;
 }
 
 #team .container {
@@ -151,5 +154,10 @@ body {
 @media (max-width: 650px) {
     .team-member {
         width: 100%;
+    }
+    .team-member:hover {
+        border-width: 5px;
+        transform: scale(1.08);
+        transition: 0.2s;
     }
 }
