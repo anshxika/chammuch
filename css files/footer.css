@@ -61,16 +61,22 @@ ul {
 }
 
 .footer-col ul li a:hover {
-    color: black; /* Black text on hover */
-    background-color: #ffcd00; /* Yellow background on hover */
-    padding-left: 10px; /* Indentation on hover */
-    border-radius: 4px; /* Rounded corners */
+    color: black;
+    background-color: #ffcd00; 
+    padding-left: 10px; 
+    padding-right: 10px;
+    border-radius: 4px; 
 }
 
 .footer-col {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
 }
-
+.footer p{
+    padding: 40px;
+    padding-bottom: 0px;
+    text-align: center;
+    color: #dbd3d3;
+}
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .footer-col {

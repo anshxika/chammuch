@@ -1,0 +1,159 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #ffcd00;
+}
+
+.navbar .brand {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ffcd00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    height: 300px;
+    background: url('banner.jpg') no-repeat center center/cover;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.banner-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffcd00;
+    z-index: 1;
+}
+
+.banner-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.signup-btn {
+    background-color: #ffcd00;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Slider Section */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cards-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+}
+.cards-wrapper::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+.card {
+    min-width: 200px;
+    margin: 0 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+
+/* Footer */
+#footer {
+    background-color: black;
+    color: #ffcd00;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .slider-container {
+        flex-direction: column;
+    }
+}
+
