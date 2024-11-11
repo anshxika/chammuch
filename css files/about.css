@@ -6,6 +6,68 @@ body {
     padding: 0;
 }
 
+/* Navbar */
+.navbar {
+    display: flex;
+    font-family: 'Afacad Flux';
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: rgb(245, 245, 245);
+    color: black;
+    position: fixed;
+    top: 0;
+    width: 95%;
+    height: 35px;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgb(255,255,255,0.3);
+}
+
+.navbar .brand {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    margin-right: 20px;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    position: relative; 
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out; 
+}
+
+.nav-links a:hover {
+    color: #6e6e64; 
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black; 
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out; 
+}
+
+/* Expanding underline effect on hover */
+.nav-links a:hover::after {
+    width: 100%; 
+    left: 0; 
+}
+
 /* About Section */
 #about {
     padding: 50px 0;
