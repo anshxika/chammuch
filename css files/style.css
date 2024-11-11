@@ -6,22 +6,30 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
+    font-family: 'Afacad Flux';
+    background-color: white;
 }
 
 /* Navbar */
 .navbar {
     display: flex;
+    font-family: 'Afacad Flux';
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #ffcd00;
+    padding: 5px 40px;
+    background-color: rgb(245, 245, 245);
+    color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .navbar .brand {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -34,16 +42,41 @@ body {
 }
 
 .nav-links a {
-    color: #ffcd00;
+    position: relative; 
     text-decoration: none;
+    color: black;
+    font-size: larger;
     font-weight: bold;
+    transition: color 0.3s ease-in-out; 
+}
+
+.nav-links a:hover {
+    color: #6e6e64; 
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black; 
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out; 
+}
+
+/* Expanding underline effect on hover */
+.nav-links a:hover::after {
+    width: 100%; 
+    left: 0; 
 }
 
 /* Banner */
 .banner {
-    position: relative;
-    height: 300px;
-    background: url('banner.jpg') no-repeat center center/cover;
+    margin-top: 45px;
+    width: 100%;
+    height: 90vh;
+    background: url(../images/banner1.png) no-repeat center center/cover;
 }
 
 .banner::before {
@@ -53,17 +86,19 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.1);
+    /* backdrop-filter: blur(2.2px); */
 }
 
 .banner-content {
     position: relative;
+    font-family: 'DynaPuff';
     top: 50%;
     left: 50%;
+    max-width: 60%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #ffcd00;
+    color: black;
     z-index: 1;
 }
 
@@ -72,16 +107,24 @@ body {
     font-weight: bold;
     margin: 0;
 }
-
 .signup-btn {
-    background-color: #ffcd00;
-    color: black;
-    padding: 8px 20px;
-    border-radius: 5px;
+    background-color: #000; /* Set button background to black */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 25px;
     text-decoration: none;
-    font-weight: bold;
     display: inline-block;
+    cursor: pointer;
     margin-top: 10px;
+    transition: background-color 0.3s ease, outline 0.3s ease; /* Added outline transition */
+    outline: 2px solid transparent; /* Add transparent outline */
+}
+
+.signup-btn:hover {
+    color: black;
+    font-weight: bold;
+    background: #ffcd00; /* Change button background to yellow on hover */
 }
 
 /* Slider Section */
