@@ -36,6 +36,7 @@ ul {
     padding: 0 15px;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .footer-col h4 {
