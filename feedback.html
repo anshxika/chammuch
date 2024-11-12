@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Page</title>
     <link rel="stylesheet" href="./css files/feedback.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +25,7 @@
         <li><a href="Login.html">Login</a>/<a href="signup.html">signup</a></li>
     </ul>
 </nav>
+
     <div class="feedback-container">
         <h2>We Value Your Feedback</h2>
         
@@ -45,7 +47,17 @@
         <div id="success-popup" class="popup">
             <p>Hoorah! Form submitted successfully.</p>
         </div>
-    </div>    
+    </div> 
+        <!--footer ---> 
+
+        <div id="footer"></div>
+        <script>
+            fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById('footer').innerHTML = data;
+              });
+          </script>   
     <script src="./js files/feedback.js"></script>
     <script src="feedback-system/feedback_server.js"></script>
 </body>
