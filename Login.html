@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./css files/login.css">
+    <link rel="stylesheet" href="footer.css">
     <script defer src="./js files/login.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
 <!-- Navbar -->
 <nav class="navbar">
     <div class="brand">
@@ -23,6 +25,7 @@
     </ul>
 </nav>
 
+<div class="content-container">
 <div class="login-container">
     <div class="login-form">
         <h2>Login</h2>
@@ -53,6 +56,19 @@
             <p>Khaana hai toh khaana hai,<br> mood set hai!</p>
         </div>
     </div>
+</div>
+</div>
+
+    <!--footer ---> 
+
+    <div id="footer"></div>
+<script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
 </body>
 </html>
 
