@@ -8,9 +8,12 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #ffb700;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding-top: 8%;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -74,14 +77,26 @@ body {
     left: 0; 
   }
 
+.content-container {
+    overflow: hidden;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6%;
+    padding-top: 0;
+}
+
 .signup-container {
     display: flex;
+    flex-direction: row;
     background-color: #fff;
     max-width: 800px; /* Reduced the max-width to make it smaller */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     width: 75%;
+    margin-bottom: 5%;
 }
 
 /* Right Form Section */
@@ -255,3 +270,13 @@ body {
     }
 }
 
+#footer {
+    overflow: hidden;
+    width: 207vh;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    clear: both;
+    bottom: 0;
+    padding-bottom: 0;
+}
