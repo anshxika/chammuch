@@ -9,10 +9,14 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #ffb700;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px 20px; /* Ensure top and bottom padding, reduced side padding for larger screens */
+  /* padding: 20px 20px; */
+  padding-top: 3.5%;
+  /* margin: 0; */
+  padding-bottom: 0%;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -75,6 +79,7 @@ body {
   width: 100%; 
   left: 0; 
 }
+
 
 /* Main container */
 .menu-container {
@@ -247,4 +252,11 @@ body {
   }
 }
 
+#footer {
+  overflow: hidden;
+  width: 210vh;
+  padding-top: 3.5%;
+  text-align: center;
+  position: relative;
+}
 
