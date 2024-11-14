@@ -115,39 +115,6 @@
         document.getElementById('footer').innerHTML = data;
       });
   </script>
-  
-  <script>
-    const addToCartButtons = document.querySelectorAll('.add-btn');
-
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            console.log("Button clicked"); // Debug log
-            const item = button.closest('.menu-item');
-            const name = item.getAttribute('data-name');
-            const price = parseFloat(item.getAttribute('data-price'));
-            const image = item.getAttribute('data-image');
-
-            console.log(`Item Name: ${name}, Price: ${price}, Image: ${image}`); // Debug log
-
-            // Load existing cart or create a new one
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-            // Check if item is already in the cart
-            const itemIndex = cart.findIndex(cartItem => cartItem.name === name);
-            if (itemIndex > -1) {
-                // Increment quantity if the item already exists in the cart
-                cart[itemIndex].quantity += 1;
-            } else {
-                // Add new item to cart with an initial quantity of 1
-                cart.push({ name: name, price: price, quantity: 1, image: image });
-            }
-
-            // Save updated cart back to localStorage
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${name} added to cart`);
-        });
-    });
-</script>
 
 <script src="./js files/script.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
