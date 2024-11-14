@@ -8,6 +8,7 @@
 body {
     font-family: 'Afacad Flux';
     background-color: white;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -127,58 +128,82 @@ body {
     background: #ffcd00; /* Change button background to yellow on hover */
 }
 
-/* Slider Section */
+/* slider for best sellers */
 .carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 1200px;
+    width: 80%;
     margin: auto;
 }
 
-.cards-wrapper {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 20px;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;
-}
-.cards-wrapper::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
-}
-
-.card {
-    min-width: 200px;
-    margin: 0 10px;
-    background-color: #333;
-    color: white;
-    border-radius: 8px;
-    padding: 20px;
+.carousel-container h2 {
     text-align: center;
+    font-size: 2.2em;
+    padding-top: 4%;
+    font-family: 'DynaPuff';
+    margin-bottom: 3.5%;
 }
 
-.carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    color: white;
+.swiper {
+    padding: 20px 0;
+    max-width: 800px;
+}
+
+.menu-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+}
+
+.menu-img-container img {
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 5px;
+}
+
+.menu-details h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.menu-details p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.menu-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.menu-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.add-btn {
+    padding: 8px 12px;
+    background: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 10;
 }
 
-.left-arrow {
-    left: 10px;
+.swipe-btn {
+    padding: 50% 120px;
+    color: #000;
 }
-
-.right-arrow {
-    right: 10px;
+.swipe-btn::after{
+    padding: 50% 120px;
+    color: #000;
 }
-
 
 /* Footer */
 #footer {
@@ -186,6 +211,7 @@ body {
     color: #ffcd00;
     padding: 20px;
     text-align: center;
+    margin-top: 5%;
 }
 
 /* Responsive */
