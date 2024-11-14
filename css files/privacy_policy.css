@@ -1,0 +1,149 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Heading styles */
+h1, h2, h3, h4 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Main title */
+h1 {
+    text-align: center;
+    font-size: 2em; /* Reduced font size */
+    color: #f0c050; /* Yellow */
+    margin-bottom: 30px;
+}
+
+/* Section styles */
+h2 {
+    font-size: 1.5em; /* Reduced font size */
+    border-bottom: 2px solid #f0c050; /* Yellow underline */
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #000000; /* Black */
+}
+
+h3 {
+    font-size: 1.2em; /* Reduced font size */
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #f0c050; /* Yellow */
+}
+
+h4 {
+    font-size: 1em; /* Reduced font size */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000000; /* Black */
+}
+
+/* Paragraphs */
+p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* List styles */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Contact Information */
+em {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Return to Home Arrow Icon Button */
+.return-home-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    color: black; /* Bold black arrow */
+    font-size: 1.5em; /* Adjust size */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.return-home-btn:hover {
+    background-color: #f0c050; /* Yellow background on hover */
+    color: white; /* White arrow on hover */
+}
+
+.return-home-btn i {
+    margin-right: 0; /* No space between the arrow and text */
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjusted for mobile */
+    }
+
+    h2 {
+        font-size: 1.3em; /* Adjusted for mobile */
+    }
+
+    h3 {
+        font-size: 1.1em; /* Adjusted for mobile */
+    }
+
+    h4 {
+        font-size: 1em; /* Adjusted for mobile */
+    }
+
+    p, ul {
+        font-size: 0.9em;
+    }
+
+    .return-home-btn {
+        font-size: 1em; /* Adjust icon size for mobile */
+    }
+}
+
+/* Footer styles for the Privacy Policy page */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    padding: 0;
+    border-top: 2px solid #f0c050; /* Yellow border for footer */
+}
