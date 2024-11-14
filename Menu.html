@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canteen Menu</title>
     <link rel="stylesheet" href="css files/menu.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+   
     <nav class="navbar">
         <div class="brand">
             <i class="fas fa-utensils"></i> चमmuch
@@ -21,7 +22,7 @@
             <li><a href="Login.html">Login</a>/<a href="signup.html">signup</a></li>
         </ul>
     </nav>
-
+    
         <div class="menu-container">
             <h2 class="menu-header">Canteen Menu</h2>
             
@@ -204,6 +205,18 @@
                 <p>Ready to order? <a href="Cart.html">Go to Cart</a></p>
             </div>
         </div>
+
+         <!--footer ---> 
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+          });
+      </script>
+      
         <script>
             const addToCartButtons = document.querySelectorAll('.add-btn');
         

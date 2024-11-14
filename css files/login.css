@@ -8,9 +8,12 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #f3f4f7;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding-top: 8%;
+    margin: 0;
+    overflow-x: hidden;
 }
 /* Navbar */
 .navbar {
@@ -247,3 +250,14 @@ body {
     }
 }
 
+#footer {
+    margin-top: 5%;
+    overflow: hidden;
+    width: 207vh;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    clear: both;
+    bottom: 0;
+    padding-bottom: 0;
+}
