@@ -6,14 +6,25 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="css files/privacy_policy.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap" rel="stylesheet">
     <title>Privacy Policy - चमmuch</title>
 </head>
 <body>
-    <!-- Return to Home Arrow Icon -->
-    <a href="index.html" class="return-home-btn">
-        <i class="fas fa-arrow-left"></i>
-    </a>
 
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="brand">
+        <i class="fas fa-utensils"></i> चमmuch
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+    </ul>
+</nav>
+
+<!-- Privacy Policy Content -->
+<div class="content">
     <h1>Privacy Policy</h1>
     <p><strong>Effective Date:</strong> <span id="effectiveDate"></span></p>
 
@@ -67,27 +78,29 @@
 
     <h2>7. Contact Us</h2>
     <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-    <p>Email: chaammuch2024@gmail.com</p>
-    <p>Phone: [Your Phone Number]</p>
+    <p>Email: chammuch2024@gmail.com</p>
+    <p>Phone: xxxxxxxxxx</p>
 
     <p><em>Last updated: <span id="lastUpdated"></span></em></p>
+</div>
 
-    <script>
-        // JavaScript to set the current date
-        const date = new Date();
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById("effectiveDate").textContent = date.toLocaleDateString(undefined, options);
-        document.getElementById("lastUpdated").textContent = date.toLocaleDateString(undefined, options);
-    </script>
-
+<!-- Footer -->
 <div id="footer"></div>
+
 <script>
+    // JavaScript to set the current date
+    const date = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("effectiveDate").textContent = date.toLocaleDateString(undefined, options);
+    document.getElementById("lastUpdated").textContent = date.toLocaleDateString(undefined, options);
+
+    // Fetch footer content
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer').innerHTML = data;
       });
-  </script>
+</script>
 
 </body>
 </html>
