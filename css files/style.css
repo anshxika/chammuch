@@ -130,8 +130,7 @@ body {
 
 /* slider for best sellers */
 .carousel-container {
-    width: 80%;
-    margin: auto;
+    width: 100%;
 }
 
 .carousel-container h2 {
@@ -143,8 +142,8 @@ body {
 }
 
 .swiper {
-    padding: 20px 0;
     max-width: 800px;
+    padding: 20px; /* Optional: Add padding to the swiper container */
 }
 
 .menu-item {
@@ -154,14 +153,28 @@ body {
     overflow: hidden;
     text-align: center;
     padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .menu-img-container img {
-    max-width: 250px;
-    max-height: 250px;
+    width: 250px;
+    height: 200px;
     border-radius: 5px;
-}
-
+    background-color: #ffdc00;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .menu-img {
+    width: 100%; /* Make the image take the full width */
+    height: 100%; /* Maintain fixed height */
+    object-fit: cover; /* Keep the image proportionally scaled */
+    border-radius: 5px;
+  }
+  
 .menu-details h3 {
     margin-top: 10px;
     font-size: 1.5em;
@@ -184,17 +197,24 @@ body {
 .menu-price {
     font-size: 1.2em;
     font-weight: bold;
-    color: #e91e63;
+    color: black;
 }
 
 .add-btn {
-    padding: 8px 12px;
-    background: #e91e63;
-    color: #fff;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     cursor: pointer;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-btn:hover {
+    background-color: #ffcd00;
+    color: black;
+  }
 
 /* Target the Swiper navigation arrows */
 .swiper-button-next, .swiper-button-prev {
