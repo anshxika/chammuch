@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+    <link rel="stylesheet" href="css files/order_history.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="brand">
+            <i class="fas fa-utensils"></i> चमmuch
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="Login.html">Login</a>/<a href="signup.html">signup</a></li>
+        </ul>
+    </nav>
+
+    <div class="order-history-container">
+        <h2 class="order-history-header">Order History</h2>
+        
+        <div class="order-history-grid" id="order-history-grid">
+            <!-- Order items will be dynamically populated here -->
+        </div>
+        
+        <div class="cart-redirect">
+            <p>Want to order again? <a href="menu.html">Go to Menu</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Function to load order history from localStorage
+        function loadOrderHistory() {
+            const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+            const orderHistoryGrid = document.getElementById('order-history-grid');
+
+            if (orderHistory.length === 0) {
+                orderHistoryGrid.innerHTML = '<p>No orders found.</p>';
+                return;
+            }
+
+            orderHistory.forEach(order => {
+                const orderItem = document.createElement('div');
+                orderItem.classList.add('menu-item');
+                
+                orderItem.innerHTML = `
+                    <div class="menu-img-container">
+                        <img src="${order.image}" alt="${order.name}" class="menu-img">
+                    </div>
+                    <div class="menu-details">
+                        <h3>${order.name}</h3>
+                        <p>Price: ₹ ${order.price} | Quantity: ${order.quantity}</p>
+                    </div>
+                `;
+                
+                orderHistoryGrid.appendChild(orderItem);
+            });
+        }
+
+        // Call the function to load order history on page load
+        document.addEventListener('DOMContentLoaded', loadOrderHistory);
+    </script>
+    
+</body>
+</html>
