@@ -142,7 +142,7 @@ body {
 }
 
 .swiper {
-    max-width: 800px;
+    max-width: 750px;
     padding: 20px; /* Optional: Add padding to the swiper container */
 }
 
@@ -155,7 +155,7 @@ body {
     padding: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .menu-img-container img {
@@ -230,7 +230,7 @@ body {
 /* Adjust arrow icon size */
 .swiper-button-next::after, .swiper-button-prev::after {
     font-size: 10px;              
-    color: #333;                 
+    color: #333;             
 }
 
 /* Fine-tune positioning if needed */
@@ -239,8 +239,8 @@ body {
 }
 
 .swiper-button-next, .swiper-button-prev {
+    margin: 80px;
     position: absolute;           
-    top: 50%;                     
     transform: translateY(-50%);  
 }
 
