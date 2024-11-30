@@ -29,7 +29,7 @@
 <div class="login-container">
     <div class="login-form">
         <h2>Login</h2>
-        <form action="#">
+        <form id="loginForm" action="#">
             <div class="input-box">
                 <i class="fas fa-user"></i>
                 <input type="text" placeholder="Username" required>
@@ -68,6 +68,41 @@
       .then(data => {
         document.getElementById('footer').innerHTML = data;
       });
+
+
+
+    //login user 
+
+    document.querySelector("#loginForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const username = document.querySelector("#username").value;
+    const password = document.querySelector("#password").value;
+
+    try {
+        const response = await fetch("/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert(result.message);
+            // Save user profile and order history in localStorage
+            localStorage.setItem("userProfile", JSON.stringify(result.profile));
+            localStorage.setItem("userOrders", JSON.stringify(result.orders));
+            window.location.href = "profile.html"; // Redirect to profile page
+        } else {
+            alert(result.message);
+        }
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    }
+});
+
+
   </script>
 </body>
 </html>
