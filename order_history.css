@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffb700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* Padding for body */
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    font-family: 'Afacad Flux';
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: rgb(245, 245, 245);
+    color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar .brand {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    position: relative; 
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out; 
+  }
+  
+  .nav-links a:hover {
+    color: #6e6e64; 
+  }
+  
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black; 
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out; 
+  }
+  
+  /* Expanding underline effect on hover */
+  .nav-links a:hover::after {
+    width: 100%; 
+    left: 0; 
+  }
+  
+  /* Main container */
+  .order-history-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    margin: 65px 0 20px 0; 
+  }
+  
+  /* Header styling */
+  .order-history-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'DynaPuff';
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: black;
+    padding: 20px 0; /* Padding around the header */
+  }
+  
+  /* Order history grid styling */
+  .order-history-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Even spacing */
+  }
+  
+  /* Order item styling */
+  .order-item {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space between items */
+    width: calc(33.33% - 20px); /* 3 cards per row with space */
+    margin-bottom: 20px; /* Spacing between rows */
+    border: 2px solid #ddd;
+    border-radius: 10px; /* Keep distinct boxes for each item */
+    background: #f9f9f9;
+    padding: 15px;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition for effects */
+    height: auto; /* Let the height adjust based on content */
+  }
+  
+  .order-item:hover {
+    border-color: #ffcd00; /* Highlight border on hover */
+    transform: translateY(-5px); /* Slightly elevate the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }
+  
+  /* Image container with fixed height */
+  .order-img-container {
+    width: 100%;
+    height: 150px; /* Set a fixed height to maintain aspect ratio */
+    background-color: #ffdc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .order-img {
+    width: 100%; /* Make the image take the full width */
+    height: 100%; /* Maintain fixed height */
+    object-fit: cover; /* Keep the image proportionally scaled */
+    border-radius: 5px;
+  }
+  
+  /* Order details */
+  .order-details h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .order-details p {
+    font-size: 0.9rem;
+    color: grey;
+    margin-bottom: 15px;
+  }
+  
+  /* Cart redirect styling */
+  .cart-redirect {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .cart-redirect a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .cart-redirect a:hover {
+    color: #ffdc00;
+  }
+  
+  /* Mobile View Adjustments */
+  @media (max-width: 768px) {
+    body {
+      padding: 20px 40px; /* Increased padding for left and right on mobile */
+    }
+  
+    .order-history-container {
+      padding: 40px; /* Maintain padding for order history container */
+    }
+  
+    .order-history-header {
+      padding: 30px 0; /* Additional padding for header on mobile */
+    }
+  
+    .order-item {
+      width: calc(100% - 40px); /* 1 card per row on mobile */
+      height: auto; /* Allow height to adjust based on content */
+      margin-bottom: 15px; /* Space between cards */
+    }
+  
+    .order-img-container {
+      height: 150px; /* Keep the height of images consistent for mobile */
+    }
+  
+    .order-history-grid {
+      justify-content: center; /* Center items when 1 per row */
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .order-item {
+      width: calc(50% - 10px); /* 2 cards per row for medium screens */
+    }
+  
+    .order-img-container {
+      height: 180px; /* Keep the height of images consistent for larger screens */
+    }
+  }
