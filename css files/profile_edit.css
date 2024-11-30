@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Poppins for body text */
+    background: #ffb700; /* Soft yellow background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%; /* Top padding */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Header Styling */
+
+
+/* Edit Profile Container */
+.edit-profile-container {
+    max-width: 400px; /* Limit width */
+    margin: 65px 0 20px; /* Margin for spacing */
+    padding: 3rem; /* Increased inner padding for spaciousness */
+    background: #fff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+}
+
+/* Title Styling */
+.edit-profile-container h2 {
+    font-family: 'DynaPuff', cursive; /* Same font as header */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    margin-bottom: 1.5rem; /* Space below the title */
+    text-align: center; /* Center the title */
+    color: black; /* Title color */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 1.5rem; /* Increased space between form groups */
+}
+
+.form-group label {
+    display: block; /* Block display for labels */
+    margin-bottom: 0.5rem; /* Space below labels */
+    color: black; /* Updated to yellow */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%; /* Full width input */
+    padding: 0.75rem; /* Increased inner padding for input */
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-family: 'Afacad Flux', sans-serif; /* Afacad Flux for input text without cursive */
+    font-size: 1rem; /* Font size for input text */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Change border color on focus */
+.form-group input:focus {
+    border-color: #ffcd00; /* Change border color to yellow on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styling */
+.save-button {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Increased padding for button */
+    font-size: 1rem; /* Font size */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.save-button:hover {
+    background-color: #ffcd00; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+
+.cancel-button {
+    background-color: #888; /* Grey background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Increased padding for button */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer; /* Pointer on hover */
+    margin-left: 1rem; /* Space between buttons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.cancel-button:hover {
+    background-color: #ffcd00; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .edit-profile-container {
+        padding: 2rem; /* Maintain padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px; /* Increased padding for mobile */
+    }
+
+    .edit-profile-container {
+        padding: 1.5rem; /* Further reduce padding for mobile */
+    }
+}

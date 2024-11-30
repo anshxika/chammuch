@@ -78,7 +78,7 @@ body {
 
 .remove-btn {
     border: none;
-    background: #ffcd00;
+    background:  #333;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -89,8 +89,8 @@ body {
 }
 
 .remove-btn:hover {
-    background: #333;
-    color: #ffcd00;
+    background: #ffcd00;
+    color: #333;
 }
 
 .item-quantity {

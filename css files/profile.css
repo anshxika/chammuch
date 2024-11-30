@@ -1,35 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #ffcd00; /* Soft orange */
     margin: 0;
     padding: 0;
     color: black;
 }
 
-header {
+header h1 {
     background-color: black;
     color: white;
     padding: 15px;
     text-align: center;
+    font-weight: bold;
 }
+
+
 
 .profile-header {
     background-color: #FFFFFF; /* White for profile card */
-    padding: 20px;
+    padding: 20px; /* Increased padding */
     display: flex;
     align-items: center;
     border-radius: 10px;
-    margin: 15px;
+    margin: 20px auto; /* Centered the card */
+    max-width: 500px; /* Increased max width */
 }
 
 .profile-picture img {
-    width: 60px;
+    width: 60px; /* Slightly larger picture */
     height: 60px;
     border-radius: 50%;
     margin-right: 15px;
@@ -40,7 +44,7 @@ header {
 }
 
 .username {
-    font-size: 1.2em;
+    font-size: 1.3em; /* Increased font size */
     margin: 0;
     color: black;
 }
@@ -56,12 +60,8 @@ header {
     font-weight: bold;
     margin-top: 5px;
 }
-
-.profile-nav {
-    background-color: #FFFFFF; /* White for the nav background */
-    margin: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.edit-button:hover {
+    color: #ffcd00; /* Change color to yellow on hover */
 }
 
 .profile-nav ul {
@@ -70,125 +70,65 @@ header {
     margin: 0;
 }
 
+.profile-nav {
+    background-color: #FFFFFF; /* White for the nav background */
+    margin: 20px auto; /* Centered the nav */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Increased max width */
+    padding: 20px; /* Add padding around the nav */
+    padding-left: 40px; /* Add left padding */
+    padding-right: 40px; /* Add right padding */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .profile-nav li {
-    border-bottom: 1px solid #ddd;
+    margin: 10px 0; /* Space between cards */
 }
 
 .profile-nav li a {
     display: block;
-    padding: 15px;
+    padding: 10px; /* Increased padding for better spacing */
     color: black;
     text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s ease; /* Smooth transition for hover */
-    border: 2px solid transparent; /* Default border is transparent */
-     
-    
+    font-size: 1.1em; /* Increased font size for nav items */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover */
+    border-radius: 10px; /* Rounded corners for card-like effect */
+    background-color: #f9f9f9; /* Light background for card effect */
+    border: 2px solid #ddd; /* Greyish border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
+
+    .profile-nav li {
+        margin: 10px 0; /* Space between cards */
+    }
+    
+    .profile-nav li a {
+        display: block;
+        padding: 20px; /* Increased padding for better spacing */
+        color: black;
+        text-decoration: none;
+        font-size: 1.1em; /* Increased font size for nav items */
+        transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover */
+        border-radius: 10px; /* Rounded corners for card-like effect */
+        background-color: #f9f9f9; /* Light background for card effect */
+        border: 2px solid #ddd; /* Greyish border */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        
+    }
+    
+    
+    /* Other existing styles remain unchanged *//* Optional: Add right margin to create space from container */
+
+
+/* Other existing styles remain unchanged */
 
 .profile-nav li a:hover {
-    color: #ffcd00; /* Darker orange for hover */
-    border-color: #ffcd00;
+    color: #ffcd00; /* Darker orange for text hover */
+    border-color: #ffcd00; /* Change border color to yellow on hover */
+    background-color: #f9f9f9; /* Keep background color the same */
 }
-
-/*edit profile css*/
-.edit-profile-container {
-    max-width: 400px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #f5f4f2;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.save-button {
-    background-color: #000;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.save-button:hover {
-    background-color: #333;
-}
-
-.cancel-button {
-    background-color: #888;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.cancel-button:hover {
-    background-color: #555;
-}
-
-/*edit ended*/
-
-/*menu*/
-
-.menu-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-list li {
-    margin: 10px 0;
-    transition: background-color 0.3s; /* Optional: add a background color transition */
-}
-
-.menu-list a {
-    text-decoration: none;
-    color: #333; /* Default text color */
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between icon and text */
-    padding: 10px; /* Add padding for better click area */
-}
-
-.menu-icon {
-    font-size: 18px; /* Adjust icon size */
-    transition: transform 0.3s ease-in-out; /* Transition for the icon */
-}
-
-.menu-list li:hover .menu-icon {
-    transform: translateY(-5px); /* Move icon upwards on hover */
-}
-
-.menu-list li:hover a {
-    color: #ffcd00; /* Change text color on hover */
-    background-color: rgba(255, 87, 34, 0.1); /* Optional: background color on hover */
-}
-
-
-
-
 footer {
     background-color: black;
     color: white;
@@ -199,9 +139,7 @@ footer {
     bottom: 0;
 }
 
-
-/*media*/
-
+/* Media queries */
 @media (max-width: 768px) {
     .profile-container {
         padding: 15px; /* Reduce padding */
@@ -213,6 +151,10 @@ footer {
 
     .profile-nav a {
         font-size: 14px; /* Smaller font size for nav items */
+    }
+
+    .menu-list li {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
     }
 }
 
@@ -240,5 +182,9 @@ footer {
 
     .profile-nav a {
         font-size: 12px; /* Even smaller font size for nav items */
+    }
+
+    .menu-list li {
+        flex: 1 1 100%; /* Full width for mobile */
     }
 }
