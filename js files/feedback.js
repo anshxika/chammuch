@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Hide the popup after 3 seconds
         setTimeout(() => {
             popup.classList.remove("active"); // Hide popup after timeout
-        }, 3000);
+        }, 4000);
     }
 
     // Handle form submission
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // Send feedback data to the server
-        fetch("http://localhost:3000/submit-feedback", {
+        fetch("http://localhost:4000/submit-feedback", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
