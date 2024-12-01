@@ -5,6 +5,12 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
+const cors = require("cors");
+
+// Enable CORS for all origins
+app.use(cors());
+
+
 // Middleware to parse JSON
 app.use(bodyParser.json());
 

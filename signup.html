@@ -19,7 +19,6 @@
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="Menu.html">Menu</a></li>
-        <li><a href="about.html">About us</a></li>
     </ul>
 </nav>
 
@@ -33,11 +32,11 @@
             <form id="signupForm" action="#">
                 <div class="input-box">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Username" required>
+                    <input id="username" type="text" placeholder="Username" required>
                 </div>
                 <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email" required>
+                    <input id="email" type="email" placeholder="Email" required>
                 </div>
                 <div class="input-box password-box">
                     <i class="fas fa-lock"></i>
@@ -71,6 +70,36 @@
       .then(data => {
         document.getElementById('footer').innerHTML = data;
       });
+
+
+        // signup user
+        
+      document.querySelector("#signupForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const username = document.querySelector("#username").value;
+    const password = document.querySelector("#password").value;
+
+    try {
+        const response = await fetch("http://localhost:3000/signup", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert(result.message);
+            window.location.href = "login.html"; // Redirect to login page on success
+        } else {
+            alert(result.message);
+        }
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    }
+});
+
   </script>
     <script defer src="./js files/signup.js"></script>
 </body>

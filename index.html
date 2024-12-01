@@ -24,7 +24,12 @@
     <ul class="nav-links">
         <li><a href="Menu.html">Menu</a></li>
         <li><a href="about.html">About us</a></li>
-        <li><a href="Login.html">Login</a>/<a href="signup.html">signup</a></li>
+        <li id="login-signup">
+            <a href="login.html">Login</a> | <a href="signup.html">Signup</a>
+        </li>
+        <li id="logout-profile" style="display: none;">
+            <a href="profile.html">Profile</a> | <a href="#" id="logout">Logout</a>
+        </li>
     </ul>
 </nav>
 
@@ -32,7 +37,7 @@
 <div class="banner">
     <div class="banner-content">
         <h1>Fuel Up, Chill Out – Tasty Bites Await at Our College Canteen!</h1>
-        <a href="signup.html" class="signup-btn">Sign Up</a>
+        <a href="signup.html" class="signup-btn" id="signup-banner-button">Sign Up</a>
     </div>
 </div>
 
@@ -114,8 +119,11 @@
       });
   </script>
 
+<script src="js files/cart.js"></script>
 <script src="./js files/script.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js files/navbar.js"></script>
+
 </body>
 </html>
 

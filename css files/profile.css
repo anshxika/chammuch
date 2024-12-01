@@ -1,223 +1,151 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffcd00; /* Soft orange */
+    font-family: Arial, sans-serif;
+    background-color: #ffb700;
     margin: 0;
     padding: 0;
-    color: black;
 }
-
-<<<<<<< HEAD
 /* Navbar */
 .navbar {
     display: flex;
+    font-family: 'Afacad Flux';
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 40px;
     background-color: rgb(245, 245, 245);
     color: black;
+    position: fixed;
+    top: 0;
+    width: 95%;
+    height: 40px;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .navbar .brand {
-    font-size: 24px;
+    font-size: 28px;
+    color: #000000;
+    font-weight: bold;
 }
 
-.nav-links {
+.navbar .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
+    gap: 15px;
     margin-left: 20px;
 }
 
-.nav-links a {
-    color: black;
+.navbar .nav-links li a {
+    position: relative;
     text-decoration: none;
+    color: #131313;
+    font-size: larger;
     font-weight: bold;
+    transition: color 0.3s,ease-in-out;
+}
+
+.navbar .nav-links li a:hover {
+    color: grey; 
+}
+.nav-links a:hover {
+    color: #6e6e64; 
+  }
+  
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black; 
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out; 
+  }
+  
+  /* Expanding underline effect on hover */
+  .nav-links a:hover::after {
+    width: 100%; 
+    left: 0; 
+  }
+
+.container {
+    width: 60%;
+    margin: 8% 20%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 header {
-=======
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 header h1 {
->>>>>>> da4725795a0f3c2a5275a06dea4e30eb938cf31c
-    background-color: black;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
+    font-family: 'DynaPuff';
+    font-size: 30px;
+    color: #333;
+}
+h2{
+    font-family: 'Afacad Flux';
+}
+.profile-section {
+    margin-bottom: 30px;
 }
 
+.profile-section h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
 
-
-.profile-header {
-    background-color: #FFFFFF; /* White for profile card */
-    padding: 20px; /* Increased padding */
+form {
     display: flex;
-    align-items: center;
-    border-radius: 10px;
-    margin: 20px auto; /* Centered the card */
-    max-width: 500px; /* Increased max width */
+    flex-direction: column;
 }
 
-.profile-picture img {
-    width: 60px; /* Slightly larger picture */
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
+label {
+    font-family: 'Afacad Flux';
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
 }
 
-.profile-details {
-    flex-grow: 1;
-}
-
-.username {
-    font-size: 1.3em; /* Increased font size */
-    margin: 0;
-    color: black;
-}
-
-.user-phone {
-    color: grey;
-    margin: 5px 0;
-}
-
-.edit-button {
-    text-decoration: none;
-    color: rgb(12, 12, 11);
-    font-weight: bold;
-    margin-top: 5px;
-}
-.edit-button:hover {
-    color: #ffcd00; /* Change color to yellow on hover */
-}
-
-.profile-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.profile-nav {
-    background-color: #FFFFFF; /* White for the nav background */
-    margin: 20px auto; /* Centered the nav */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px; /* Increased max width */
-    padding: 20px; /* Add padding around the nav */
-    padding-left: 40px; /* Add left padding */
-    padding-right: 40px; /* Add right padding */
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.profile-nav li {
-    margin: 10px 0; /* Space between cards */
-}
-
-.profile-nav li a {
-    display: block;
-    padding: 10px; /* Increased padding for better spacing */
-    color: black;
-    text-decoration: none;
-    font-size: 1.1em; /* Increased font size for nav items */
-    transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover */
-    border-radius: 10px; /* Rounded corners for card-like effect */
-    background-color: #f9f9f9; /* Light background for card effect */
-    border: 2px solid #ddd; /* Greyish border */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-}
-
-    .profile-nav li {
-        margin: 10px 0; /* Space between cards */
-    }
-    
-    .profile-nav li a {
-        display: block;
-        padding: 20px; /* Increased padding for better spacing */
-        color: black;
-        text-decoration: none;
-        font-size: 1.1em; /* Increased font size for nav items */
-        transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover */
-        border-radius: 10px; /* Rounded corners for card-like effect */
-        background-color: #f9f9f9; /* Light background for card effect */
-        border: 2px solid #ddd; /* Greyish border */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-        
-    }
-    
-    
-    /* Other existing styles remain unchanged *//* Optional: Add right margin to create space from container */
-
-
-/* Other existing styles remain unchanged */
-
-.profile-nav li a:hover {
-    color: #ffcd00; /* Darker orange for text hover */
-    border-color: #ffcd00; /* Change border color to yellow on hover */
-    background-color: #f9f9f9; /* Keep background color the same */
-}
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
+input {
     padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-/* Media queries */
-@media (max-width: 768px) {
-    .profile-container {
-        padding: 15px; /* Reduce padding */
-    }
-
-    .profile-header h1 {
-        font-size: 22px; /* Slightly smaller heading */
-    }
-
-    .profile-nav a {
-        font-size: 14px; /* Smaller font size for nav items */
-    }
-
-    .menu-list li {
-        flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
-    }
+button {
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* Media query for mobile devices */
-@media (max-width: 480px) {
-    body {
-        padding: 10px; /* Reduce body padding */
-    }
+button:hover {
+    background-color: #ffcd00;
+    color: black;
+}
 
-    .profile-container {
-        padding: 10px; /* Further reduce padding */
-    }
+.section-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
 
-    .profile-header h1 {
-        font-size: 20px; /* Even smaller heading */
-    }
+.link {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
 
-    .profile-nav {
-        padding: 0; /* Remove padding */
-    }
-
-    .profile-nav li {
-        margin: 8px 0; /* Reduce margin between nav items */
-    }
-
-    .profile-nav a {
-        font-size: 12px; /* Even smaller font size for nav items */
-    }
-
-    .menu-list li {
-        flex: 1 1 100%; /* Full width for mobile */
-    }
+.link:hover {
+    color: grey;
 }

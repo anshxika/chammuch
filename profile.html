@@ -3,45 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - College Canteen</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="css files/profile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <header>
-        <h1><i class="fas fa-utensils"></i> चमmuch
-        </h1>
-    </header>
-    <main>
-        <div class="profile-header">
-            <div class="profile-picture">
-                <img src="images/profile.jpg" alt="Profile Picture">
-            </div>
-            <div class="profile-details">
-                <h2 class="username">User Name</h2>
-                <p class="user-phone">User Number</p>
-                <a href="profile_edit.html" class="edit-button">Edit</a>
-
-            </div>
+    <nav class="navbar">
+        <div class="brand">
+            <i class="fas fa-utensils"></i> चमmuch
         </div>
-    
-        <nav class="profile-nav">
-            <ul>
-                <li><a href="Menu.html"><i class="fa-solid fa-utensils menu-icon"></i> Menu</a></li>
-                <li><a href="#"><i class="fa-solid fa-sack-dollar menu-icon"></i> Deals & Offers</a></li>
-                <li><a href="#"><i class="fa-solid fa-location-dot menu-icon"></i> Track Order</a></li>
-                <li><a href="order_history.html"><i class="fa-solid fa-clock-rotate-left menu-icon"></i> Order History</a></li>
-                <li><a href="#"><i class="fa-solid fa-wallet menu-icon"></i> Chammuch's Wallet</a></li>
-                <li><a href="feedback.html"><i class="fa-solid fa-message menu-icon"></i> Feedback</a></li>
-                <li><a href="#"><i class="fa-solid fa-scroll menu-icon"></i> Terms & Conditions</a></li>
-            </ul>
-        </nav>
-    </main>
-    <footer>
-        <p>&copy; 2024 College Canteen. All rights reserved.</p>
-    </footer>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li id="login-signup">
+                <a href="login.html">Login</a> | <a href="signup.html">Signup</a>
+            </li>
+            <li id="logout-profile" style="display: none;">
+                <a href="profile.html">Profile</a> | <a href="#" id="logout">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Welcome, <span id="username-display">User</span></h1>
+        </header>
+
+        <div class="profile-section">
+            <h2>Profile Details</h2>
+            <form id="profileForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" disabled>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="current-password">Current Password:</label>
+                <input type="password" id="current-password" name="current-password">
+
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password">
+
+                <label for="confirm-password">Confirm New Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+
+        <div class="section-links">
+            <a href="cart.html" class="link">Go to Cart</a>
+            <a href="order_history.html" class="link">Order History</a>
+            <a href="feedback.html" class="link">Leave Feedback</a>
+        </div>
+    </div>
+
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener("DOMContentLoaded", () => {
+            const userProfile = JSON.parse(localStorage.getItem("userProfile"));
+
+            if (!userProfile) {
+                alert("Please log in first!");
+                window.location.href = "login.html"; // Redirect to login if no profile found
+                return;
+            }
+
+            document.getElementById("username-display").textContent = userProfile.username;
+            document.getElementById("username").value = userProfile.username;
+            document.getElementById("email").value = userProfile.email;
+        
+        });
+
+        document.getElementById("profileForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const currentPassword = document.getElementById("current-password").value;
+            const newPassword = document.getElementById("new-password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            // Check if current password matches the saved password
+            if (currentPassword !== userProfile.password) {
+                alert("Current password is incorrect.");
+                return;
+            }
+
+            // Check if new password and confirm password match
+            if (newPassword !== confirmPassword) {
+                alert("New passwords do not match.");
+                return;
+            }
+
+            // Simulate saving the new password
+            userProfile.password = newPassword;
+            console.log("Profile updated:", { newEmail: document.getElementById("email").value, newPassword });
+            alert("Profile updated successfully!");
+        });
+    </script>
+    <script src="./js files/navbar.js"></script>
 </body>
 </html>
