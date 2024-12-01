@@ -1,5 +1,6 @@
 # Node modules
 feedback-system/node_modules/
+node_modules
 
 #data
 feedback-system/feedbackData.json
@@ -13,3 +14,4 @@ feedback-system/feedbackData.json
 # OS generated files
 .DS_Store
 Thumbs.db
+
